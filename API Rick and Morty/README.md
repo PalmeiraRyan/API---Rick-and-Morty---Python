@@ -36,4 +36,4 @@ DELETE | http://localhost:5000/personagens/{id} -> Deleta o personagem especific
 DELETE | http://localhost:5000/local/{id} -> Deleta o local especificado.
 
 GET | http://localhost:5000/personagens_locais/{id} -> Mostra o personagem especificado, sua origem e sua localização atual.
-GET | http://localhost:5000/local_atual/{id} -> Mostra o local especificado, e os personagens que  estão neste local atualmente. 
+GET | http://localhost:5000/local_atual/{id} -> Mostra o local especificado e os personagens que  estão neste local atualmente. 
