@@ -194,15 +194,7 @@ def buscar_personagem_Local_unico(id):
         o = list[21].lower()
         origin = db.search(Query().nome == o)[0]
     except IndexError:
-        Personagem = database.search(Query().id == id)[0]
-        v = str(Personagem)
-        list = v.split("'")
-        l = list[25].lower()
-        print(l)
-        local = db.search(Query().nome == l)[0]
-        
-        o = list[21].lower()
-        origin = db.search(Query().nome == o)[0]    
+        return {'message': 'Não tem esse ID no nosso banco!'}, 404     
     return jsonify(Personagem, 'O último local que este(a) personagem foi visto: ', local, 'a origem do(a) personagem é de:', origin)
 
 @app.route('/local_atual/<int:id>', methods=['GET'])
